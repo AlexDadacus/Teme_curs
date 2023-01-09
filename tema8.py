@@ -51,7 +51,6 @@ tag2 = driver.find_element(By.TAG_NAME, 'p')                                # By
 print(tag2.get_attribute("outerHTML"))
 tag3 = driver.find_element(By.TAG_NAME, 'h5')                               # By.TAG_NAME
 print(tag3.get_attribute("outerHTML"))
-
 # -----------------
 driver = webdriver.Chrome()
 driver.get('https://www.ebay.com/')
@@ -63,6 +62,15 @@ print(clasa2.get_attribute("outerHTML"))                                       #
 driver.get('https://the-internet.herokuapp.com/login')
 clasa3 = driver.find_element(By.CLASS_NAME, 'row')                             # By.CLASS_NAME
 print(clasa3.get_attribute("outerHTML"))
+# -----------------
+driver = webdriver.Chrome()
+driver.get('http://www.seleniumframework.com/decision-models/')
+a = driver.find_element(By.CSS_SELECTOR, '#text-11 > div > form > p:nth-child(2) > input[type=text]') # By.CSS_SELECTOR
+print(a.get_attribute("outerHTML"))
+b = driver.find_element(By.CSS_SELECTOR, '#recent-posts-3')        # By.CSS_SELECTOR
+print(b.get_attribute("outerHTML"))
+c = driver.find_element(By.CSS_SELECTOR, '#page > a')              # By.CSS_SELECTOR
+print(c.get_attribute("outerHTML"))
 # -----------------
 driver = webdriver.Chrome()
 driver.get('https://the-internet.herokuapp.com/login')
